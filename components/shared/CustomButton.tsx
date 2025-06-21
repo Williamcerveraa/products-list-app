@@ -1,5 +1,5 @@
 import React from 'react';
-import { Pressable, PressableProps, Text, View } from 'react-native';
+import { View, Text, Pressable, PressableProps } from 'react-native';
 
 interface Props extends PressableProps {
   children: string;
@@ -9,7 +9,6 @@ interface Props extends PressableProps {
   className?: string;
 }
 
-// eslint-disable-next-line react/display-name
 const CustomButton = React.forwardRef(
   (
     {
@@ -37,7 +36,7 @@ const CustomButton = React.forwardRef(
     if (variant === 'text-only') {
       return (
         <Pressable
-          className={`p-3 m-2 ${className}`}
+          className={`p-3 ${className}`}
           onPress={onPress}
           onLongPress={onLongPress}
           ref={ref}
@@ -51,7 +50,7 @@ const CustomButton = React.forwardRef(
 
     return (
       <Pressable
-        className={`p-3 m-2 rounded-md ${btnColor} active:opacity-90 ${className}`}
+        className={`p-3 rounded-md ${btnColor} active:opacity-90 ${className}`}
         onPress={onPress}
         onLongPress={onLongPress}
         ref={ref}

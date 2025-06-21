@@ -1,7 +1,9 @@
-import { useFonts } from 'expo-font';
-import { Slot, SplashScreen } from 'expo-router';
 import { useEffect } from 'react';
+import { Slot, SplashScreen, Stack } from 'expo-router';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import { useFonts } from 'expo-font';
+
+import './global.css';
 
 SplashScreen.preventAutoHideAsync();
 
@@ -24,8 +26,9 @@ const RootLayout = () => {
     <GestureHandlerRootView style={{ flex: 1 }}>
       <Slot />
     </GestureHandlerRootView>
-
   );
-  //return <Slot />;
+
+  // return <Slot />;
+  // return <Stack />;
 };
 export default RootLayout;
