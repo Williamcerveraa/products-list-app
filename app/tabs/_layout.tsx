@@ -6,7 +6,17 @@ import React from 'react'
 //tabBarShowLabel : false es para quitar el texto de las tabs, solo mostrar iconos
 const TabsLayout = () => {
   return (
-    <Tabs screenOptions={{ tabBarActiveTintColor: 'blue' }}>
+    <Tabs screenOptions={{ tabBarActiveTintColor: 'indigo' ,
+      //headerShown: false,
+    }}>
+      <Tabs.Screen
+        name="(stack)"
+        options={{
+          title: 'Inicio',
+          tabBarIcon: ({ color }) => <FontAwesome size={28} name="user" color={color} />,
+        }}
+      />
+      
       <Tabs.Screen
         name="home/index"
         options={{

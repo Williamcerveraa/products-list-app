@@ -4,7 +4,7 @@ import React from 'react';
 //En NEXT JS y expo router, los archivos dentro la carpeta app son las pantallas
 
 const App = () => {
-   return <Redirect href="/home" />;
+   return <Redirect href="/tabs" />;
   // return (
   //   <SafeAreaView>
   //     <View className="mt-5 mx-3">
